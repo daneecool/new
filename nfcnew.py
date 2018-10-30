@@ -18,7 +18,8 @@ target_req_suica = nfc.clf.RemoteTarget("212F")
 target_req_suica.sensf_req = bytearray.fromhex("0000030000")
 
 print('...waiting for card...')
-acceptedIDM = ("010102122B128D28")
+# add on extra ids 
+acceptedIds = ("010102122B128D28")
 while True:
     # Connected to NFC reader connected to USB and instantiated
     clf = nfc.ContactlessFrontend('usb')
@@ -35,11 +36,12 @@ while True:
 
         #Extract IDm
         idm = binascii.hexlify(tag.idm)
-        for (IDm in acceptedIDm)
-            if(IDm == acceptedIDm[idm]
+        for (ids in acceptedIds){
+            if(IDm == acceptedIDm[idm]){
         print('Nimoca detected. idm = ' + idm)
-
         print('Authorisation Accepted')
+            }
+        }    
         time.sleep(TIME_wait)
     #end if
 
