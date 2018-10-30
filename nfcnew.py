@@ -19,7 +19,7 @@ target_req_suica.sensf_req = bytearray.fromhex("0000030000")
 
 print('...waiting for card...')
 # add on extra ids 
-acceptedIds = ("010102122B128D28")
+acceptedIds = ["010102122B128D28"];
 while True:
     # Connected to NFC reader connected to USB and instantiated
     clf = nfc.ContactlessFrontend('usb')
