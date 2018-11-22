@@ -77,10 +77,10 @@ while True:
            # print(Fore.GREEN)
            # print (now.strftime("%Y-%m-%d %H:%M:%S"))
             print (Fore.RED)
-            print(Style.RESET_ALL)
             if store == ("Denied Personnel"):
                 print store
             file.close()
+            print(Style.RESET_ALL)
     time.sleep(TIME_wait)
     #end if
 
